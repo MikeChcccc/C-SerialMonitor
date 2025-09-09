@@ -1,0 +1,8 @@
+pyserial
+pyside6
+# 蓝牙支持 - 根据操作系统选择安装
+# Windows/Linux: pybluez 或 bleak (推荐)
+# macOS: pybluez2 或 bleak (推荐)
+pybluez ; sys_platform != 'darwin'  # 不支持macOS
+pybluez2 ; sys_platform == 'darwin'  # macOS版本
+bleak
